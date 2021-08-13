@@ -64,7 +64,7 @@ function App(props) {
             bucket={bucket} setBucket={setBucket}
              data={users_data} setData={setUserData} />
            } />  
-          <Route path={`${match.path}`} render={()=><HomePage 
+          <Route path='/Message-Affinity-Map' render={()=><HomePage 
             bucket={bucket} setBucket={setBucket}
              data={users_data} setData={setUserData} update={update} editUpdate={editUpdate}remove={remove}/>
            } />
