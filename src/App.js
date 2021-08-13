@@ -63,7 +63,7 @@ function App() {
             bucket={bucket} setBucket={setBucket}
              data={users_data} setData={setUserData} />
            } />  
-          <Route exact path='/' render={()=><HomePage 
+          <Route path='/' render={()=><HomePage 
             bucket={bucket} setBucket={setBucket}
              data={users_data} setData={setUserData} update={update} editUpdate={editUpdate}remove={remove}/>
            } />
