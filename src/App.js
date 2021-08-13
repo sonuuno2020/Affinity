@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from "react";
-import {Switch,Route} from 'react-router-dom';
+import {Switch,Route,withRouter} from 'react-router-dom';
 
 import USER_DATA from './data';
 import HomePage from './pages/homepage/homepage.component';
@@ -8,7 +8,7 @@ import GroupHighlight from './pages/group-highlights/group-highlight.component';
 
 import Header from "./components/header/header.component";
 
-function App() {
+function App(props) {
   const [bucket,setBucket]=useState(["Services","Risk"]);
   const [users_data,setUserData]=useState(USER_DATA);
 
@@ -53,17 +53,18 @@ function App() {
     console.log(final)
     setUserData(updatedUser)
   }
- 
+ const {match} = props;
+ console.log(match)
   return (
     <div>
     
       <Header bucket={bucket} setBucket={setBucket}/>
       <Switch>
-          <Route exact path='/group' render={()=><GroupHighlight 
+          <Route  path='Message-Affinity-Map/group' render={()=><GroupHighlight 
             bucket={bucket} setBucket={setBucket}
              data={users_data} setData={setUserData} />
            } />  
-          <Route path='/' render={()=><HomePage 
+          <Route path={`${match.path}`} render={()=><HomePage 
             bucket={bucket} setBucket={setBucket}
              data={users_data} setData={setUserData} update={update} editUpdate={editUpdate}remove={remove}/>
            } />
@@ -76,4 +77,4 @@ function App() {
   );
 }
 
-export default App;
+export default withRouter(App);

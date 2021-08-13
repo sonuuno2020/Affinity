@@ -23,7 +23,7 @@ const Header=({bucket,setBucket})=>{
 
 	return (
 		<div className="header">
-			<Link to="/" className="Message">
+			<Link to='/Message-Affinity-Map' className="Message">
 			   <h1>Message/Affinity Map</h1>
 			</Link>
 			
@@ -38,7 +38,7 @@ const Header=({bucket,setBucket})=>{
 					</div>
 					{flag?<AddBucket  update={update}/>:null}
 					<div className="option" >
-						<Link to="/group" className="link">
+						<Link to='Message-Affinity-Map/group'className="link">
 			     	  Group Highligts
 			      </Link>
 							
