@@ -60,11 +60,11 @@ function App(props) {
     
       <Header bucket={bucket} setBucket={setBucket}/>
       <Switch>
-          <Route  path='Message-Affinity-Map/group' render={()=><GroupHighlight 
+          <Route exact path='/group' render={()=><GroupHighlight 
             bucket={bucket} setBucket={setBucket}
              data={users_data} setData={setUserData} />
            } />  
-          <Route path='/Message-Affinity-Map' render={()=><HomePage 
+          <Route path='/Message' render={()=><HomePage 
             bucket={bucket} setBucket={setBucket}
              data={users_data} setData={setUserData} update={update} editUpdate={editUpdate}remove={remove}/>
            } />
