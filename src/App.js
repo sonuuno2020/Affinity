@@ -37,19 +37,12 @@ function App() {
   },[users_data])
 
  function editUpdate(newHghlt){
-    
     let editUser=users_data.filter(i=>i.id!==newHghlt.id);
-    
     setUserData([...editUser,newHghlt]);
-  
-  
   }
 
  function update(newHghlt){
-     
     setUserData([...users_data,newHghlt]);
-  
-    
   } 
 
   function remove(id){
