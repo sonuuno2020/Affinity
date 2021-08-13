@@ -1,0 +1,41 @@
+.homepage{
+  .upper{
+    display: flex;
+    justify-content: space-between;
+
+    .search{
+      justify-content: flex-start;
+      margin-left: 70px !important;
+      display: flex;
+      margin:20px;
+        .dropdown{
+          background-color: black;
+          color:white;
+        }   
+      }
+      img{
+        margin-right: 100px;
+      }
+    }
+    .container{
+      margin-left:50px;
+      .highlights{
+      display: flex;
+      flex-wrap:wrap;
+      width: 100%;
+      justify-content: flex-start;
+      .item{
+        width:250px;
+        padding: 10px;
+        margin:10px;
+      }
+    }
+  }
+}
+
+.zoomIn {
+   transition: transform .2s; 
+  &:hover{
+    transform: scale(1.5);
+  }
+}

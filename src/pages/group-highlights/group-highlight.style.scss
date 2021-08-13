@@ -1,0 +1,50 @@
+.group{
+    display: flex;
+    margin:5px;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    width:95%;
+    .name{
+      display:flex ;
+      justify-content: center;
+    }
+    .container{
+     
+      margin:10px;
+      width:45%;
+      height:100%;
+      background-color: #cabbbb; 
+      display: block;
+      justify-content: flex-start;
+      
+
+
+
+      .highlights{
+        margin:5px;
+      
+        display: flex;
+        justify-content: space-between;
+        flex-wrap:wrap;
+
+
+        .item{
+          margin:5px;
+          width: 95%;
+        }
+        
+      
+       
+      
+    }
+  }
+}
+
+.zoomIn {
+   transition: transform .2s; 
+  &:hover{
+    transform: scale(1.5);
+  }
+}
+
+
