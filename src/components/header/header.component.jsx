@@ -23,7 +23,7 @@ const Header=({bucket,setBucket})=>{
 
 	return (
 		<div className="header">
-			<Link to='/Message' className="Message">
+			<Link to='/Affinity' className="Message">
 			   <h1>Message/Affinity Map</h1>
 			</Link>
 			
