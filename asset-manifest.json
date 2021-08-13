@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Affinity/static/css/main.da07af77.chunk.css",
+    "main.js": "/Affinity/static/js/main.64ff6097.chunk.js",
+    "main.js.map": "/Affinity/static/js/main.64ff6097.chunk.js.map",
+    "runtime-main.js": "/Affinity/static/js/runtime-main.3ee0ccb3.js",
+    "runtime-main.js.map": "/Affinity/static/js/runtime-main.3ee0ccb3.js.map",
+    "static/js/2.50c11ade.chunk.js": "/Affinity/static/js/2.50c11ade.chunk.js",
+    "static/js/2.50c11ade.chunk.js.map": "/Affinity/static/js/2.50c11ade.chunk.js.map",
+    "static/js/3.1f109352.chunk.js": "/Affinity/static/js/3.1f109352.chunk.js",
+    "static/js/3.1f109352.chunk.js.map": "/Affinity/static/js/3.1f109352.chunk.js.map",
+    "index.html": "/Affinity/index.html",
+    "static/css/main.da07af77.chunk.css.map": "/Affinity/static/css/main.da07af77.chunk.css.map",
+    "static/js/2.50c11ade.chunk.js.LICENSE.txt": "/Affinity/static/js/2.50c11ade.chunk.js.LICENSE.txt",
+    "static/media/pinceau.b61c0090.svg": "/Affinity/static/media/pinceau.b61c0090.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3ee0ccb3.js",
+    "static/js/2.50c11ade.chunk.js",
+    "static/css/main.da07af77.chunk.css",
+    "static/js/main.64ff6097.chunk.js"
+  ]
+}
