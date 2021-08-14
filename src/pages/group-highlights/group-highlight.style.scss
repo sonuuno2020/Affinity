@@ -21,16 +21,17 @@
 
 
       .highlights{
-        margin:5px;
-      
+        
+        margin: 10px;
         display: flex;
         justify-content: space-between;
         flex-wrap:wrap;
 
 
         .item{
-          margin:5px;
-          width: 95%;
+          
+          width: 50%;
+          min-width: 250px;
         }
         
       

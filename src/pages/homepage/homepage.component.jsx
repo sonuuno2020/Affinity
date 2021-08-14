@@ -1,9 +1,11 @@
 import React,{useState}  from 'react';
+import Draggable from 'react-draggable';
+
 import './homepage.style.scss';
 import {ReactComponent as Logo} from './../../assets/document.png';
+
+
 import EditItem from './../../components/Edit/edit.component';
-
-
 import AddItem from './../../components/AddItem/additem.component';
 import HighLight from './../../components/highlights/highlight.component';
 
@@ -13,9 +15,10 @@ const HomePage=({bucket,setBucket,data,setData,update,remove,editUpdate})=>{
 	const [flag,setFlag]=useState(false);
 	const [type,setType]=useState("N/A");
 	const [isWrite,setIsWrt]=useState(null);
+	const [active,SetActive]=useState(0);
 	
 
-	const color=["#4fde4f","#4fdec3","#d54fde","#d54ffe","#e54fde",
+	const color=["#4fde4f","#4fdec3","#d54fde",
 	"#f52b5b","#ff9800","#1becd9","#dbef1f"];
 
 	function fun(){
@@ -23,6 +26,13 @@ const HomePage=({bucket,setBucket,data,setData,update,remove,editUpdate})=>{
 		setFlag(!flag)
 		console.log(flag);
 		
+	}
+
+	function onStart(){
+		SetActive(active+1)
+	}
+	function onStop(){
+		SetActive(active-1)
 	}
 
 	const handleSelect=event=>{
@@ -33,7 +43,7 @@ const HomePage=({bucket,setBucket,data,setData,update,remove,editUpdate})=>{
 
 	}
 	
-
+	const dragHandlers = {onStart, onStop};
 	
 	
 	return(
@@ -57,22 +67,28 @@ const HomePage=({bucket,setBucket,data,setData,update,remove,editUpdate})=>{
 				{	flag?<AddItem users={data} update={update} setFlag={setFlag}/>:null}
 			</div>
 			<div className="container">
-				<div className="highlights">
-					{
-						type==="N/A"?
-						data.map(user=>
-						<div className="item zoomIn" style={{backgroundColor:color[Math.floor(Math.random()*color.length)]}}>
-							<HighLight key={user.id} item={user} remove={remove} setIsWrt={setIsWrt} flag={false}/>
-						</div>	
-						)
-						:data.filter((item)=>item.type===type).map(user=>
-						<div className="item zoomIn" style={{backgroundColor:color[Math.floor(Math.random()*color.length)]}}>
-							<HighLight key={user.id} item={user} remove={remove} setIsWrt={setIsWrt} setItems={setData}flag={false}/>
-						</div>	
-						)
-					}
 				
-				</div>
+					<div className="highlights">
+						{
+							type==="N/A"?
+							data.map(user=>
+							<Draggable {...dragHandlers}>	
+								<div className="item zoomIn" style={{backgroundColor:color[Math.floor(user.id%color.length)]}}>
+									<HighLight key={user.id} item={user} remove={remove} setIsWrt={setIsWrt} flag={false}/>
+								</div>
+							</Draggable>	
+							)
+							:data.filter((item)=>item.type===type).map(user=>
+							<Draggable {...dragHandlers}>		
+								<div className="item zoomIn" style={{backgroundColor:color[Math.floor(user.id*color.length)]}}>
+									<HighLight key={user.id} item={user} remove={remove} setIsWrt={setIsWrt} setItems={setData}flag={false}/>
+								</div>
+							</Draggable>		
+							)
+						}
+					
+					</div>
+				
 			</div>
 			{
         
@@ -85,3 +101,5 @@ const HomePage=({bucket,setBucket,data,setData,update,remove,editUpdate})=>{
 }
 
 export default HomePage;
+
+//https://reactjsexample.com/a-simple-component-for-making-elements-draggable/
