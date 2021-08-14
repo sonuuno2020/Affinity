@@ -80,7 +80,7 @@ const HomePage=({bucket,setBucket,data,setData,update,remove,editUpdate})=>{
 							)
 							:data.filter((item)=>item.type===type).map(user=>
 							<Draggable {...dragHandlers}>		
-								<div className="item zoomIn" style={{backgroundColor:color[Math.floor(user.id*color.length)]}}>
+								<div className="item zoomIn" style={{backgroundColor:color[Math.floor(user.id%color.length)]}}>
 									<HighLight key={user.id} item={user} remove={remove} setIsWrt={setIsWrt} setItems={setData}flag={false}/>
 								</div>
 							</Draggable>		
