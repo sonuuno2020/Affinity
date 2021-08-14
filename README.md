@@ -1,3 +1,26 @@
+# Affinity-Map
+It is collection of sticky notes or highlights which are categorized in some buckets.
+
+## demo video drive link:
+https://drive.google.com/file/d/103EmoafKtDIMr_E2rnCWNxeY5w4pMJc7/view?usp=sharing
+
+## functionality:
+1. create new highlight
+2. filter dropdown
+3. create new bucket
+4. delete a highlight
+5. edit a highlight
+6. Zoom-in Zoom-out highlights
+7. Drag and drop highlights
+
+## Sticky notes are categorized in 3 stages:
+1.Standard which is default,all highlights are placed in grid manner
+
+2.Sorted,we can get sorted stage from standanrd by dragging highlihts...means by moving make closer with similar ones.
+
+3.Group,all the highlights are grouped under a specific bucked
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
