@@ -13,8 +13,8 @@ https://drive.google.com/file/d/103EmoafKtDIMr_E2rnCWNxeY5w4pMJc7/view?usp=shari
 6. Zoom-in Zoom-out highlights
 7. Drag and drop highlights
 
-## sticky notes are categorized in 3 stages:
-1. Standard which is default,all highlights are placed in grid manner
+## Sticky notes are categorized in 3 stages:
+1.Standard which is default,all highlights are placed in grid manner
 
 2.Sorted,we can get sorted stage from standanrd by dragging highlihts...means by moving make closer with similar ones.
 
